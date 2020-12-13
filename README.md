@@ -1,4 +1,3 @@
-![](blob/image.png?raw=true)
 # MRI Tumor Identifier App
 
 Used transfer learning to classify between brain MRI images that had a tumor present and those that did not. Used InceptionV3 model to train over 120 epochs with little over 250 MRI images to achieve an 88% accuracy on test data. The number of epochs needed was derived from visual inspection, i.e. plotting accuracy and loss for validation and training sets over said amount of epochs. 
@@ -8,3 +7,4 @@ Using MXNet's gluon API I was able to create the model, test it, save the model'
 The main script to test the CNN with the data already provide within the data folder is in the _testing_ folder. 
 The main script to test the web-app with the parameters saved by me is in the _visualize_ folder.
 
+![](blob/image.png?raw=true)

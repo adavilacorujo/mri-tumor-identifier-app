@@ -10,7 +10,6 @@ import dash_html_components as html
 import utils.dash_reusable_components as drc
 
 from mxnet import nd
-from pathlib import Path
 from dash.dependencies import Input, Output, State
 from analytics.cnn import MRI
 from analytics.data_ingestion import Data

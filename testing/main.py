@@ -14,7 +14,7 @@ if __name__ == '__main__':
     d = Data()
     
     # Get train, val, and test images 
-    x_train, y_train  = d.get_images("../data/train/", train=True)
+    x_train, y_train  = d.get_images("../data/train/", train=False)
     x_val, y_val      = d.get_images("../data/val/")
     x_test, y_test    = d.get_images("../data/test/")
 
@@ -25,7 +25,11 @@ if __name__ == '__main__':
     # Crop training images
     x_train         = d.crop_imgs(x_train)
     x_val           = d.crop_imgs(x_val)
-    x_test_cropped  = d.crop_imgs(x_test)
+
+    d.save_images(x_train, y_train, '../data/train/cropped/')
+    d.save_images(x_val, y_val, '../data/val/cropped/')
+    
+    # x_test_cropped  = d.crop_imgs(x_test)
 
     # Create dataloaders for mxnet's model
     # gluon prefers data to be (num_batch, channels, n, n)

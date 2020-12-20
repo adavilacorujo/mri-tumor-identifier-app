@@ -1,6 +1,5 @@
 
 mxnet-cu101==1.7.0
-numpy 
 gluoncv==0.9.0
 matplotlib==3.2.2
 opencv-python==4.2.0.34
@@ -15,3 +14,8 @@ dash-renderer==1.5.1
 dash-table==4.8.1
 plotly==4.9.0
 Pillow
+numpy>=1.18.3
+scikit-image==0.16.2
+pandas==1.0.3
+gunicorn==20.0.4
+dash_bootstrap_components==0.10.7

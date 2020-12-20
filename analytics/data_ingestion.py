@@ -117,3 +117,15 @@ class Data():
             new_images.append(new_img)
         
         return np.array(new_images, dtype='object')
+    
+    def save_images(self, images, labels, directory):
+        file_names = ['cropped{}.jpg'.format(i) for i in range(len(images))]
+        for i, image in enumerate(images):
+            if labels[i] == 1:
+                d = directory + 'yes/'
+                cv2.imwrite(d + file_names[i], image)
+            else:
+                d = directory + 'no/'
+                cv2.imwrite(d + file_names[i], image)
+            
+
